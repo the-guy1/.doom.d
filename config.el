@@ -45,7 +45,7 @@
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
 
-(setq fancy-splash-image (concat doom-private-dir "emacs.png"))
+(setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
