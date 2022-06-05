@@ -157,6 +157,7 @@
        ;;plantuml          ; diagrams for confusing people more
        purescript        ; javascript, but functional
        python            ; beautiful is better than ugly
+       ;; pip install jedi autopep8 flake8 ipython importmagic yapf
        qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
