@@ -8,6 +8,8 @@
 - [[#description][Description]]
 - [[#some-screen-shots][Some Screen shots]]
 - [[#my-configuration-files][My configuration files]]
+  - [[#beacon][Beacon]]
+  - [[#my-information][my information]]
   - [[#needs-to-be-sorted][needs to be sorted]]
 
 * Description
@@ -19,20 +21,26 @@ This is my DOOM Emacs config
 
 
 * My configuration files
+** Beacon
+Never lose your cursor.  When you scroll, your cursor will shine!
+- This is to help you from loosing your cursor when you are scrolling
+#+begin_src elisp
+(setq beacon-mode 1) ;; enable beacon mode
+;; Place your private configuration here! Remember, you do not need to run 'doom
+;; sync' after modifying this file!
+#+end_src
+** my information
+This is so Emacs knows my name and email and will auto insert it if I want it to
+#+begin_src elisp
+(setq user-full-name "Kenneth Lawson"
+      user-mail-address "lawsonkenneth755@gmail.com")
+#+end_src
 
 ** needs to be sorted
 I am using tangle so this it my real config this section is what needs to me sorted later
 #+begin_src elisp
-(setq beacon-mode 1) ;; enable beacon mode
-
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
 
 
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets. It is optional.
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
