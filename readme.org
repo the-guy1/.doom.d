@@ -1,71 +1,147 @@
 #+TITLE:   My README for DOOM Emacs
-#+DATE:    May 3, 2022
-#+SINCE:   <replace with next tagged release version>
-#+STARTUP: inlineimages nofold
+#+AUTHOR: Kenneth Lawson
+#+PROPERTY: header-args :tangle config.el
+#+auto_tangle: t
+#+STARTUP: showeverything
 
-* Table of Contents :TOC_3:noexport:
+* Table of Contents :TOC:
 - [[#description][Description]]
-  - [[#maintainers][Maintainers]]
-  - [[#module-flags][Module Flags]]
-  - [[#plugins][Plugins]]
-  - [[#hacks][Hacks]]
-- [[#prerequisites][Prerequisites]]
-- [[#features][Features]]
-- [[#configuration][Configuration]]
-- [[#troubleshooting][Troubleshooting]]
+- [[#some-screen-shots][Some Screen shots]]
+- [[#my-configuration-files][My configuration files]]
+  - [[#needs-to-be-sorted][needs to be sorted]]
 
 * Description
 # A summary of what this module does.
+This is my DOOM Emacs config
 
-+ If possible, include a brief list of feature highlights here
-+ Like code completion, syntax checking or available snippets
-+ Include links to packages & external things where possible
+* Some Screen shots
+- Add some screen shots
 
-** Maintainers
-+ @username_linked_to_gihub (Author)
-+ @username_linked_to_gihub
-+ @username_linked_to_gihub
 
-# If this module has no maintainers, then...
-This module has no dedicated maintainers.
+* My configuration files
 
-** Module Flags
-+ =+flag1= A short description of what this flag does and what it might need
-  when enabled.
-+ =+flag2= A short description of what this flag does and what it might need
-  when enabled.
-+ =+flag3= A short description of what this flag does and what it might need
-  when enabled.
+** needs to be sorted
+I am using tangle so this it my real config this section is what needs to me sorted later
+#+begin_src elisp
+(setq beacon-mode 1) ;; enable beacon mode
 
-# If this module has no flags, then...
-This module provides no flags.
+;; Place your private configuration here! Remember, you do not need to run 'doom
+;; sync' after modifying this file!
 
-** Plugins
-# A list of linked plugins
-+ [[https://orgmode.org/][org-plus-contrib]]
-+ [[https://github.com/sabof/org-bullets][org-bullets]]
-+ [[https://github.com/TobiasZawada/org-yt][org-yt]]
-+ [[https://github.com/sebastiencs/company-box][company-box]]* (=+childframe=)
-+ =:lang crystal=
-  + [[https://github.com/brantou/ob-crystal][ob-crystal]]
-+ =:lang go=
-  + [[https://github.com/pope/ob-go][ob-go]]
-+ =+present=
-  + [[https://github.com/anler/centered-window-mode][centered-window]]
-  + [[https://github.com/takaxp/org-tree-slide][org-tree-slide]]
-  + [[https://gitlab.com/oer/org-re-reveal][org-re-reveal]]
 
-** Hacks
-# A list of internal modifications to included packages; omit if unneeded
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets. It is optional.
+(setq user-full-name "Kenneth Lawson"
+      user-mail-address "lawsonkenneth755@gmail.com")
 
-* Prerequisites
-This module has no prerequisites.
+;; Doom exposes five (optional) variables for controlling fonts in Doom:
+;;
+;; - `doom-font' -- the primary font to use
+;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
+;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
+;; - `doom-unicode-font' -- for unicode glyphs
+;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
+;;
+;; See 'C-h v doom-font' for documentation and more examples of what they
+;; accept. For example:
+;;
+(setq doom-font (font-spec :family "Hack Nerd Font" :size 15 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16))
+;;
+;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
+;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
+;; refresh your font settings. If Emacs still can't find your font, it likely
+;; wasn't installed correctly. Font issues are rarely Doom issues!
 
-* Features
-# An in-depth list of features, how to use them, and their dependencies.
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function. This is the default:
+(setq doom-theme 'doom-dracula)
 
-* Configuration
-# How to configure this module, including common problems and how to address them.
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type 'relative)
 
-* Troubleshooting
-# Common issues and their solution, or places to look for help.
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+(setq org-directory "~/org/")
+
+(add-hook! '+doom-dashboard-functions :append
+  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
+
+(setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
+
+;; Whenever you reconfigure a package, make sure to wrap your config in an
+;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
+;;
+;;   (after! PACKAGE
+;;     (setq x y))
+;;
+;; The exceptions to this rule:
+;;
+;;   - Setting file/directory variables (like `org-directory')
+;;   - Setting variables which explicitly tell you to set them before their
+;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
+;;   - Setting doom variables (which start with 'doom-' or '+').
+;;
+;; Here are some additional functions/macros that will help you configure Doom.
+;;
+;; - `load!' for loading external *.el files relative to this one
+;; - `use-package!' for configuring packages
+;; - `after!' for running code after a package has loaded
+;; - `add-load-path!' for adding directories to the `load-path', relative to
+;;   this file. Emacs searches the `load-path' when you load packages with
+;;   `require' or `use-package'.
+;; - `map!' for binding new keys
+;;
+;; To get information about any of these functions/macros, move the cursor over
+;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
+;; This will open documentation for it, including demos of how they are used.
+;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
+;; etc).
+;;
+;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
+;; they are implemented.
+
+(setq org-journal-dir "~/Dropbox/org/journal/"
+      org-journal-date-prefix "#+TITLE: "
+      org-journal-time-prefix "* "
+      org-journal-date-format "%a, %Y-%m-%d"
+      org-journal-file-format "%Y-%m-%d.org")
+
+(require 'elfeed-goodies)
+(elfeed-goodies/setup)
+(setq elfeed-goodies/entry-pane-size 0.5)
+(setq elfeed-feeds (quote
+                    (("https://gamingonlinux.com/article_rss.php" gaming on linux)
+                     ("https://hackaday.com/blog/feedd/" hackaday)
+                     ("https://opensource.com/feed" opensource linux)
+                     ("https://www.snopes.com/feed/" snopes)
+                     ("https://chaski.huffpost.com/us/auto/vertical/books" hp books)
+                     ("https://chaski.huffpost.com/us/auto/vertical/education" hp education)
+                     ("https://chaski.huffpost.com/us/auto/vertical/queer-voices" hp queer)
+                     ("https://chaski.huffpost.com/us/auto/vertical/science" hp science)
+                     ("https://chaski.huffpost.com/us/auto/vertical/technology" hp technology)
+                     ("https://chaski.huffpost.com/us/auto/vertical/green" hp green)
+                     ("https://chaski.huffpost.com/us/auto/vertical/media" hp media)
+                     ("https://chaski.huffpost.com/us/auto/vertical/politics" hp politics)
+                     ("https://chaski.huffpost.com/us/auto/vertical/religion" hp religion)
+                     ("https://chaski.huffpost.com/us/auto/vertical/world-news" hp world)
+                     ("https://chaski.huffpost.com/us/auto/vertical/us-news" hp us)
+                     ("https://opensource.com/feed" opensource linux)
+                     ("https://linux.softpedia.com/backend.xml" softpedia linux)
+                     ("https://itsfoss.com/feed/" itsfoss)
+                     ("https://www.zdnet.com/topic/linux/rss.xml" zdnet linux)
+                     ("https://www.phoronix.com/rss.php" phoronix)
+                     ("http://feeds.feedburner.com/d0od" omgubuntu)
+                     ("https://www.computerworld.com/index.rss" computerworld)
+                     ("http://www.theverge.com/rss/index.xml" the verge))))
+
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
+
+#+end_src
