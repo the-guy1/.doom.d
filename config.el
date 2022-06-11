@@ -83,3 +83,24 @@
       org-journal-time-prefix "* "
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
+
+(require 'elfeed-goodies)
+(elfeed-goodies/setup)
+(setq elfeed-goodies/entry-pane-size 0.5)
+(setq elfeed-feeds (quote
+                    (("https://gamingonlinux.com/article_rss.php" gaming on linux)
+                     ("https://hackaday.com/blog/feedd/" hackaday)
+                     ("https://opensource.com/feed" opensource linux)
+                     ("https://www.snopes.com/feed/" snopes)
+                     ("https://chaski.huffpost.com/us/auto/vertical/books" hp books)
+                     ("https://chaski.huffpost.com/us/auto/vertical/education" hp education)
+                     ("https://chaski.huffpost.com/us/auto/vertical/queer-voices" hp queer)
+                     ("https://chaski.huffpost.com/us/auto/vertical/science" hp science)
+                     ("https://chaski.huffpost.com/us/auto/vertical/technology" hp technology)
+                     ("https://chaski.huffpost.com/us/auto/vertical/green" hp green)
+                     ("https://chaski.huffpost.com/us/auto/vertical/media" hp media)
+                     ("https://chaski.huffpost.com/us/auto/vertical/politics" hp politics)
+                     ("https://chaski.huffpost.com/us/auto/vertical/religion" hp religion)
+                     ("https://chaski.huffpost.com/us/auto/vertical/world-news" hp world)
+                     ("https://chaski.huffpost.com/us/auto/vertical/us-news" hp us)
+                     ("http://www.theverge.com/rss/index.xml" the verge))))
