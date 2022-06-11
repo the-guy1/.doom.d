@@ -23,7 +23,9 @@
 This is my DOOM Emacs config
 
 * Some Screen shots
-- Add some screen shots
+- Dashboard
+  #+DESCRIPTION: This is my dashboard
+  [[./screenshots/dashboard.png]]
 
 
 * My configuration files
