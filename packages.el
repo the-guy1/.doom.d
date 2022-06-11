@@ -52,3 +52,5 @@
 (package! tldr)
 (package! elfeed-goodies)
 (package! org-auto-tangle)
+(package! mw-thesaurus)
+(package! evil-tutor)
