@@ -112,3 +112,9 @@
                      ("http://feeds.feedburner.com/d0od" omgubuntu)
                      ("https://www.computerworld.com/index.rss" computerworld)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
+
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))

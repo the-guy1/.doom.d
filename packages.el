@@ -51,3 +51,4 @@
 
 (package! tldr)
 (package! elfeed-goodies)
+(package! org-auto-tangle)
