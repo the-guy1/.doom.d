@@ -79,7 +79,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq org-journal-date-prefix "#+TITLE: "
+(setq org-journal-dir "~/Dropbox/org/journal/"
+      org-journal-date-prefix "#+TITLE: "
       org-journal-time-prefix "* "
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
@@ -103,4 +104,11 @@
                      ("https://chaski.huffpost.com/us/auto/vertical/religion" hp religion)
                      ("https://chaski.huffpost.com/us/auto/vertical/world-news" hp world)
                      ("https://chaski.huffpost.com/us/auto/vertical/us-news" hp us)
+                     ("https://opensource.com/feed" opensource linux)
+                     ("https://linux.softpedia.com/backend.xml" softpedia linux)
+                     ("https://itsfoss.com/feed/" itsfoss)
+                     ("https://www.zdnet.com/topic/linux/rss.xml" zdnet linux)
+                     ("https://www.phoronix.com/rss.php" phoronix)
+                     ("http://feeds.feedburner.com/d0od" omgubuntu)
+                     ("https://www.computerworld.com/index.rss" computerworld)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
