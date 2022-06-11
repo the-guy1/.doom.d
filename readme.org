@@ -10,7 +10,13 @@
 - [[#my-configuration-files][My configuration files]]
   - [[#beacon][Beacon]]
   - [[#my-information][my information]]
-  - [[#needs-to-be-sorted][needs to be sorted]]
+  - [[#fonts][Fonts]]
+  - [[#theme][Theme]]
+  - [[#line-numbers][Line Numbers]]
+  - [[#dashboard][Dashboard]]
+  - [[#org-mode][Org-mode]]
+  - [[#rss][RSS]]
+  - [[#auto-tangle][auto tangle]]
 
 * Description
 # A summary of what this module does.
@@ -36,12 +42,9 @@ This is so Emacs knows my name and email and will auto insert it if I want it to
       user-mail-address "lawsonkenneth755@gmail.com")
 #+end_src
 
-** needs to be sorted
-I am using tangle so this it my real config this section is what needs to me sorted later
+** Fonts
+I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]
 #+begin_src elisp
-
-
-
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
@@ -51,73 +54,60 @@ I am using tangle so this it my real config this section is what needs to me sor
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
-;; See 'C-h v doom-font' for documentation and more examples of what they
-;; accept. For example:
-;;
-(setq doom-font (font-spec :family "Hack Nerd Font" :size 15 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16))
-;;
-;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
-;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
-;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 15 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16))
+#+end_src
 
+** Theme
+I use Dracula theme
+#+begin_src elisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dracula)
+#+end_src
 
+** Line Numbers
+I use relitive line numders for quick jumps while coding
+#+begin_src elisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
+#+end_src
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-
+** Dashboard
+I am well aware that I don't need to use dashboard however I enjoy the splash screen
+- have a custom icon from the internet
+- and a message on the bottom of Emacs
+#+begin_src elisp
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
 
 (setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
+#+end_src
 
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
-;;
-;;   (after! PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
-
+** Org-mode
+These are just a few changes to orgmode as most of the changes are from extentions
+*** Org directory
+Changed the default location of my org directory to be in my Dropbox so it will auto backup
+#+begin_src elisp
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+(setq org-directory "~/Dropbox/org/")
+#+end_src
+*** journal
+This is for my journal that I use for notes and some freewriting
+#+begin_src elisp
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
       org-journal-time-prefix "* "
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
-
+#+end_src
+** RSS
+I use elfeed which is a RSS reader that is built into Emacs
+with the main feeds that I use
+#+begin_src elisp
 (require 'elfeed-goodies)
 (elfeed-goodies/setup)
 (setq elfeed-goodies/entry-pane-size 0.5)
@@ -146,10 +136,15 @@ I am using tangle so this it my real config this section is what needs to me sor
                      ("https://www.computerworld.com/index.rss" computerworld)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
 
+
+#+end_src
+
+** auto tangle
+I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file
+#+begin_src elisp
 (use-package! org-auto-tangle
   :defer t
   :hook (org-mode . org-auto-tangle-mode)
   :config
   (setq org-auto-tangle-default t))
-
 #+end_src
