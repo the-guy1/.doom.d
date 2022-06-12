@@ -17,6 +17,7 @@
   - [[#org-mode][Org-mode]]
   - [[#rss][RSS]]
   - [[#auto-tangle][auto tangle]]
+  - [[#org-super-agenda][Org Super Agenda]]
 
 * Description
 # A summary of what this module does.
@@ -60,7 +61,8 @@ I use Hack Nerd Font because I like how it looks and it can be looked at for a l
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
 (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 15 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16))
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16)
+      projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects")
 #+end_src
 
 ** Theme
@@ -152,4 +154,25 @@ I am using tangle which allows the code blocks from this readme to become be use
   :hook (org-mode . org-auto-tangle-mode)
   :config
   (setq org-auto-tangle-default t))
+#+end_src
+** Org Super Agenda
+#+begin_src elisp
+(def-package! org-super-agenda
+  :after org-agenda
+  :init
+  (setq org-super-agenda-groups '((:name "Today"
+                                         :time-grid t
+                                         :scheduled today)
+                                   (:name "Due Today"
+                                          :deadline today)
+                                   (:name "Important"
+                                          :priority "A")
+                                   (:name "Overdue"
+                                          :deadline past)
+                                   (:name "Due soon"
+                                          :deadline future)
+                                   (:name "Big Outcomes"
+                                          :tag "bo")))
+  config:
+  (org-super-agenda-mode))
 #+end_src

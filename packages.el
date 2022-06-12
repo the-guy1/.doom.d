@@ -56,3 +56,4 @@
 (package! evil-tutor)
 (package! modus-themes)
 (package! prettier-js)
+(package! org-super-agenda)

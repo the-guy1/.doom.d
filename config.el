@@ -15,7 +15,8 @@
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
 (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 15 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16))
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16)
+      projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects")
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -74,3 +75,22 @@
   :hook (org-mode . org-auto-tangle-mode)
   :config
   (setq org-auto-tangle-default t))
+
+(def-package! org-super-agenda
+  :after org-agenda
+  :init
+  (setq org-super-agenda-groups '((:name "Today"
+                                         :time-grid t
+                                         :scheduled today)
+                                   (:name "Due Today"
+                                          :deadline today)
+                                   (:name "Important"
+                                          :priority "A")
+                                   (:name "Overdue"
+                                          :deadline past)
+                                   (:name "Due soon"
+                                          :deadline future)
+                                   (:name "Big Outcomes"
+                                          :tag "bo")))
+  config:
+  (org-super-agenda-mode))
