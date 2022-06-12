@@ -55,3 +55,4 @@
 (package! mw-thesaurus)
 (package! evil-tutor)
 (package! modus-themes)
+(package! prettier-js)
