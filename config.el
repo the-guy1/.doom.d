@@ -68,6 +68,7 @@
                      ("https://www.phoronix.com/rss.php" phoronix)
                      ("http://feeds.feedburner.com/d0od" omgubuntu)
                      ("https://www.computerworld.com/index.rss" computerworld)
+                     ("https://feeds.arstechnica.com/arstechnica/index" arstechnica)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
 
 (use-package! org-auto-tangle
