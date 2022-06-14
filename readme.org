@@ -20,7 +20,7 @@
 
 * Description
 # A summary of what this module does.
-This is my DOOM Emacs config
+This is my DOOM literate DOOM Emacs config
 
 * Some Screen shots
 - Dashboard
@@ -69,11 +69,10 @@ I use Hack Nerd Font because I like how it looks and it can be looked at for a l
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 17 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 18)
-      projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects")
+ (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 15 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16)
+      projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
-
 ** Theme
 I use Dracula theme
 #+begin_src elisp
@@ -155,4 +154,3 @@ with the main feeds that I use
 
 
 #+end_src
-
