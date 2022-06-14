@@ -10,13 +10,13 @@
 - [[#my-configuration-files][My configuration files]]
   - [[#beacon][Beacon]]
   - [[#my-information][my information]]
+  - [[#auto-tangle][auto tangle]]
   - [[#fonts][Fonts]]
   - [[#theme][Theme]]
   - [[#line-numbers][Line Numbers]]
   - [[#dashboard][Dashboard]]
   - [[#org-mode][Org-mode]]
   - [[#rss][RSS]]
-  - [[#auto-tangle][auto tangle]]
 
 * Description
 # A summary of what this module does.
@@ -47,6 +47,16 @@ This is so Emacs knows my name and email and will auto insert it if I want it to
       user-mail-address "lawsonkenneth755@gmail.com")
 #+end_src
 
+** auto tangle
+I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file
+#+begin_src elisp
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
+#+end_src
+
 ** Fonts
 I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]
 #+begin_src elisp
@@ -59,8 +69,8 @@ I use Hack Nerd Font because I like how it looks and it can be looked at for a l
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 16 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 17)
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 17 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 18)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects")
 #+end_src
 
@@ -146,12 +156,3 @@ with the main feeds that I use
 
 #+end_src
 
-** auto tangle
-I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file
-#+begin_src elisp
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default t))
-#+end_src

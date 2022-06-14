@@ -5,6 +5,12 @@
 (setq user-full-name "Kenneth Lawson"
       user-mail-address "lawsonkenneth755@gmail.com")
 
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
@@ -14,8 +20,8 @@
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 16 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 17)
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 17 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 18)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects")
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -70,9 +76,3 @@
                      ("https://www.computerworld.com/index.rss" computerworld)
                      ("https://feeds.arstechnica.com/arstechnica/index" arstechnica)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
-
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default t))
