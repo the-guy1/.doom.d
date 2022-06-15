@@ -104,7 +104,7 @@ I am well aware that I don't need to use dashboard however I enjoy the splash sc
 ** Org-mode
 These are just a handful of changes to orgmode as most of the changes are from extentions
 *** Timer
-A little bell for the timer built into emacs org-mode
+A little bell for the timer built into Emacs org-mode
 #+begin_src elisp
 (require 'org)
 (setq org-clock-sound "~/.doom.d/bell.wav")
