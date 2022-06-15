@@ -20,7 +20,7 @@
 
 * Description
 # A summary of what this module does.
-This is my DOOM literate DOOM Emacs config
+This is my literate DOOM Emacs config
 
 * Some Screen shots
 - Dashboard
