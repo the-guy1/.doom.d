@@ -110,6 +110,14 @@ Changed the default location of my org directory to be in my Dropbox so it will 
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Dropbox/org/")
 #+end_src
+*** change headings meta levels
+This allows me to move headings and there content around a document
+#+begin_src elisp
+(after! org
+       (map! :map org-mode-map
+             :n "M-J" #'org-metadown
+             :n "M-k" #'org-metaup))
+#+end_src
 *** journal
 This is for my journal that I use for notes and some freewriting
 #+begin_src elisp

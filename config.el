@@ -42,6 +42,11 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Dropbox/org/")
 
+(after! org
+       (map! :map org-mode-map
+             :n "M-J" #'org-metadown
+             :n "M-k" #'org-metaup))
+
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
       org-journal-time-prefix "* "
