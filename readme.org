@@ -7,10 +7,10 @@
 * Table of Contents :TOC:
 - [[#description][Description]]
 - [[#some-screen-shots][Some Screen shots]]
-- [[#my-configuration-files][My configuration files]]
+- [[#my-configuration-files][My Configuration Files]]
   - [[#beacon][Beacon]]
-  - [[#my-information][my information]]
-  - [[#auto-tangle][auto tangle]]
+  - [[#my-information][My Information]]
+  - [[#auto-tangle][Auto Tangle]]
   - [[#fonts][Fonts]]
   - [[#theme][Theme]]
   - [[#line-numbers][Line Numbers]]
@@ -26,12 +26,12 @@ This is my DOOM literate DOOM Emacs config
 - Dashboard
   #+DESCRIPTION: This is my dashboard
   [[./screenshots/dashboard.png]]
-- code
+- Code
   #+DESCRIPTION: a screenshot of my code
   [[./screenshots/code.png]]
 
 
-* My configuration files
+* My Configuration Files
 ** Beacon
 Never lose your cursor.  When you scroll, your cursor will shine!
 - This is to help you from loosing your cursor when you are scrolling
@@ -40,14 +40,14 @@ Never lose your cursor.  When you scroll, your cursor will shine!
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 #+end_src
-** my information
+** My Information
 This is so Emacs knows my name and email and will auto insert it if I want it to
 #+begin_src elisp
 (setq user-full-name "Kenneth Lawson"
       user-mail-address "lawsonkenneth755@gmail.com")
 #+end_src
 
-** auto tangle
+** Auto Tangle
 I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file
 #+begin_src elisp
 (use-package! org-auto-tangle
