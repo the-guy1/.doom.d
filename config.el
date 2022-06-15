@@ -38,6 +38,9 @@
 
 (setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
 
+(require 'org)
+(setq org-clock-sound "~/.doom.d/bell.wav")
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Dropbox/org/")
