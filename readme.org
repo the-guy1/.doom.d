@@ -33,7 +33,7 @@ This is my literate DOOM Emacs config
 
 * My Configuration Files
 ** Beacon
-Never lose your cursor.  When you scroll, your cursor will shine!
+Never lose your cursor.
 - This is to help you from loosing your cursor when you are scrolling
 #+begin_src elisp
 (setq beacon-mode 1) ;; enable beacon mode
@@ -102,7 +102,7 @@ I am well aware that I don't need to use dashboard however I enjoy the splash sc
 #+end_src
 
 ** Org-mode
-These are just a few changes to orgmode as most of the changes are from extentions
+These are just a handful of changes to orgmode as most of the changes are from extentions
 *** Org directory
 Changed the default location of my org directory to be in my Dropbox so it will auto backup
 #+begin_src elisp
@@ -120,7 +120,7 @@ This is for my journal that I use for notes and some freewriting
       org-journal-file-format "%Y-%m-%d.org")
 #+end_src
 ** RSS
-I use elfeed which is a RSS reader that is built into Emacs
+I use elfeed which is a RSS reader in Emacs
 with the main feeds that I use
 #+begin_src elisp
 (require 'elfeed-goodies)
