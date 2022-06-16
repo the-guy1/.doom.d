@@ -8,6 +8,7 @@
 - [[#description][Description]]
 - [[#some-screen-shots][Some Screen shots]]
 - [[#my-configuration-files][My Configuration Files]]
+  - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
   - [[#beacon][Beacon]]
   - [[#my-information][My Information]]
   - [[#auto-tangle][Auto Tangle]]
@@ -32,23 +33,28 @@ This is my literate DOOM Emacs config
 
 
 * My Configuration Files
+** Disable cl depreciated warning
+This old library is still used by some plugins and Emacs will tell you to stop using it.
+#+begin_src elisp
+(setq byte-compile-warnings '(cl-functions))
+#+end_src
 ** Beacon
 Never lose your cursor.
-- This is to help you from loosing your cursor when you are scrolling
+- This is to help you from loosing your cursor when you are scrolling.
 #+begin_src elisp
 (setq beacon-mode 1) ;; enable beacon mode
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 #+end_src
 ** My Information
-This is so Emacs knows my name and email and will auto insert it if I want it to
+This is so Emacs knows my name and email and will auto insert it if I want it to.
 #+begin_src elisp
 (setq user-full-name "Kenneth Lawson"
       user-mail-address "lawsonkenneth755@gmail.com")
 #+end_src
 
 ** Auto Tangle
-I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file
+I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file.
 #+begin_src elisp
 (use-package! org-auto-tangle
   :defer t
@@ -58,7 +64,7 @@ I am using tangle which allows the code blocks from this readme to become be use
 #+end_src
 
 ** Fonts
-I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]
+I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]].
 #+begin_src elisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -74,7 +80,7 @@ I use Hack Nerd Font because I like how it looks and it can be looked at for a l
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
 ** Theme
-I use Dracula theme
+I use Dracula theme I like the colors.
 #+begin_src elisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -83,7 +89,7 @@ I use Dracula theme
 #+end_src
 
 ** Line Numbers
-I use relitive line numders for quick jumps while coding
+I use relitive line numders for quick jumps while coding.
 #+begin_src elisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -91,9 +97,9 @@ I use relitive line numders for quick jumps while coding
 #+end_src
 
 ** Dashboard
-I am well aware that I don't need to use dashboard however I enjoy the splash screen
-- have a custom icon from the internet
-- and a message on the bottom of Emacs
+I am well aware that I don't need to use dashboard however I enjoy the splash screen.
+- I have a custom icon from the internet
+- and a message on the bottom of Emacs.
 #+begin_src elisp
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
@@ -102,22 +108,23 @@ I am well aware that I don't need to use dashboard however I enjoy the splash sc
 #+end_src
 
 ** Org-mode
-These are just a handful of changes to orgmode as most of the changes are from extentions
+These are just a handful of changes to orgmode as most of the changes are from extentions.
 *** Timer
-A little bell for the timer built into Emacs org-mode
+A little bell for the timer built into Emacs org-mode.
+- I found the bell sound online.
 #+begin_src elisp
 (require 'org)
 (setq org-clock-sound "~/.doom.d/bell.wav")
 #+end_src
 *** Org directory
-Changed the default location of my org directory to be in my Dropbox so it will auto backup
+Changed the default location of my org directory to be in my Dropbox so it will auto backup.
 #+begin_src elisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Dropbox/org/")
 #+end_src
 *** change headings meta levels
-This allows me to move headings and there content around a document
+This allows me to move headings and there content around a document.
 #+begin_src elisp
 (after! org
        (map! :map org-mode-map
@@ -125,7 +132,7 @@ This allows me to move headings and there content around a document
              :n "M-k" #'org-metaup))
 #+end_src
 *** journal
-This is for my journal that I use for notes and some freewriting
+This is for my journal that I use for notes and some freewriting.
 #+begin_src elisp
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
@@ -135,7 +142,7 @@ This is for my journal that I use for notes and some freewriting
 #+end_src
 ** RSS
 I use elfeed which is a RSS reader in Emacs
-with the main feeds that I use
+with the main feeds that I use.
 #+begin_src elisp
 (require 'elfeed-goodies)
 (elfeed-goodies/setup)
