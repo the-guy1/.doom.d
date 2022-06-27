@@ -33,11 +33,13 @@ This is my literate DOOM Emacs config
 
 
 * My Configuration Files
+
 ** Disable cl depreciated warning
 This old library is still used by some plugins and Emacs will tell you to stop using it.
 #+begin_src elisp
 (setq byte-compile-warnings '(cl-functions))
 #+end_src
+
 ** Beacon
 Never lose your cursor.
 - This is to help you from loosing your cursor when you are scrolling.
@@ -46,6 +48,7 @@ Never lose your cursor.
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 #+end_src
+
 ** My Information
 This is so Emacs knows my name and email and will auto insert it if I want it to.
 #+begin_src elisp
@@ -64,7 +67,7 @@ I am using tangle which allows the code blocks from this readme to become be use
 #+end_src
 
 ** Fonts
-I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]].
+I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]. I am aware That I don't need to keep the original comments for this but I like to keep them just in case I need to reference them sometime.
 #+begin_src elisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -79,6 +82,7 @@ I use Hack Nerd Font because I like how it looks and it can be looked at for a l
       doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
+
 ** Theme
 I use Dracula theme I like the colors.
 #+begin_src elisp
@@ -140,6 +144,7 @@ This is for my journal that I use for notes and some freewriting.
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
 #+end_src
+
 ** RSS
 I use elfeed which is a RSS reader in Emacs
 with the main feeds that I use.
