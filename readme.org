@@ -18,6 +18,8 @@
   - [[#dashboard][Dashboard]]
   - [[#org-mode][Org-mode]]
   - [[#rss][RSS]]
+- [[#presentations][Presentations]]
+  - [[#org-presents][org-presents]]
 
 * Description
 # A summary of what this module does.
@@ -179,4 +181,23 @@ with the main feeds that I use.
                      ("http://www.theverge.com/rss/index.xml" the verge))))
 
 
+#+end_src
+* Presentations
+** org-presents
+[[https://github.com/rlister/org-present][org-present github]]
+#+begin_src elisp
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-hide-cursor)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-show-cursor)
+                 (org-present-read-write)))))
 #+end_src
