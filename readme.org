@@ -4,22 +4,7 @@
 #+auto_tangle: t
 #+STARTUP: showeverything
 
-* Table of Contents :TOC:
-- [[#description][Description]]
-- [[#some-screen-shots][Some Screen shots]]
-- [[#my-configuration-files][My Configuration Files]]
-  - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
-  - [[#beacon][Beacon]]
-  - [[#my-information][My Information]]
-  - [[#auto-tangle][Auto Tangle]]
-  - [[#fonts][Fonts]]
-  - [[#theme][Theme]]
-  - [[#line-numbers][Line Numbers]]
-  - [[#dashboard][Dashboard]]
-  - [[#org-mode][Org-mode]]
-  - [[#rss][RSS]]
-- [[#presentations][Presentations]]
-  - [[#org-presents][org-presents]]
+* TABLE OF CONTENTS :toc:
 
 * Description
 # A summary of what this module does.
@@ -137,8 +122,13 @@ This allows me to move headings and there content around a document.
        (map! :map org-mode-map
              :n "M-J" #'org-metadown
              :n "M-k" #'org-metaup))
-;       (setq org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
 
+#+end_src
+*** Org Superstar
+#+begin_src elisp
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-superstar-mode 1)))
 #+end_src
 *** Journal
 This is for my journal that I use for notes and some freewriting.

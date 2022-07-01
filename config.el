@@ -51,7 +51,10 @@
        (map! :map org-mode-map
              :n "M-J" #'org-metadown
              :n "M-k" #'org-metaup))
-;       (setq org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-superstar-mode 1)))
 
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
