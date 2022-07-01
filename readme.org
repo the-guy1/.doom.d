@@ -132,10 +132,13 @@ Changed the default location of my org directory to be in my Dropbox so it will 
 *** Change headings meta levels
 This allows me to move headings and there content around a document.
 #+begin_src elisp
+
 (after! org
        (map! :map org-mode-map
              :n "M-J" #'org-metadown
              :n "M-k" #'org-metaup))
+;       (setq org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
+
 #+end_src
 *** Journal
 This is for my journal that I use for notes and some freewriting.
@@ -145,6 +148,36 @@ This is for my journal that I use for notes and some freewriting.
       org-journal-time-prefix "* "
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
+#+end_src
+**** test
+** Presentations
+*** org-presents
+[[https://github.com/rlister/org-present][org-present github]]
+#+begin_src elisp
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-hide-cursor)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-show-cursor)
+                 (org-present-read-write)))))
+#+end_src
+
+** Markdown
+Variable Markdown header sizes
+#+begin_src elisp
+(custom-set-faces
+ '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold :family "variable-pitch"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2)))))
 #+end_src
 
 ** RSS
@@ -181,23 +214,4 @@ with the main feeds that I use.
                      ("http://www.theverge.com/rss/index.xml" the verge))))
 
 
-#+end_src
-* Presentations
-** org-presents
-[[https://github.com/rlister/org-present][org-present github]]
-#+begin_src elisp
-(eval-after-load "org-present"
-  '(progn
-     (add-hook 'org-present-mode-hook
-               (lambda ()
-                 (org-present-big)
-                 (org-display-inline-images)
-                 (org-present-hide-cursor)
-                 (org-present-read-only)))
-     (add-hook 'org-present-mode-quit-hook
-               (lambda ()
-                 (org-present-small)
-                 (org-remove-inline-images)
-                 (org-present-show-cursor)
-                 (org-present-read-write)))))
 #+end_src

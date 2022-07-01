@@ -51,12 +51,34 @@
        (map! :map org-mode-map
              :n "M-J" #'org-metadown
              :n "M-k" #'org-metaup))
+;       (setq org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
 
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
       org-journal-time-prefix "* "
       org-journal-date-format "%a, %Y-%m-%d"
       org-journal-file-format "%Y-%m-%d.org")
+
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-hide-cursor)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-show-cursor)
+                 (org-present-read-write)))))
+
+(custom-set-faces
+ '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold :family "variable-pitch"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2)))))
 
 (require 'elfeed-goodies)
 (elfeed-goodies/setup)
@@ -86,18 +108,3 @@
                      ("https://www.computerworld.com/index.rss" computerworld)
                      ("https://feeds.arstechnica.com/arstechnica/index" arstechnica)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
-
-(eval-after-load "org-present"
-  '(progn
-     (add-hook 'org-present-mode-hook
-               (lambda ()
-                 (org-present-big)
-                 (org-display-inline-images)
-                 (org-present-hide-cursor)
-                 (org-present-read-only)))
-     (add-hook 'org-present-mode-quit-hook
-               (lambda ()
-                 (org-present-small)
-                 (org-remove-inline-images)
-                 (org-present-show-cursor)
-                 (org-present-read-write)))))
