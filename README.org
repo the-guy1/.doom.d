@@ -4,7 +4,23 @@
 #+auto_tangle: t
 #+STARTUP: showeverything
 
-* TABLE OF CONTENTS :toc:
+
+* Table of Contents :toc:
+- [[#description][Description]]
+- [[#some-screen-shots][Some Screen shots]]
+- [[#my-configuration-files][My Configuration Files]]
+  - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
+  - [[#beacon][Beacon]]
+  - [[#my-information][My Information]]
+  - [[#auto-tangle][Auto Tangle]]
+  - [[#fonts][Fonts]]
+  - [[#theme][Theme]]
+  - [[#line-numbers][Line Numbers]]
+  - [[#dashboard][Dashboard]]
+  - [[#org-mode][Org-mode]]
+  - [[#presentations][Presentations]]
+  - [[#markdown][Markdown]]
+  - [[#rss][RSS]]
 
 * Description
 # A summary of what this module does.
