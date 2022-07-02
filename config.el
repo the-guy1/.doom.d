@@ -1,17 +1,11 @@
-(setq byte-compile-warnings '(cl-functions))
+ (setq byte-compile-warnings '(cl-functions))
 
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
 
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
-
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default t))
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;

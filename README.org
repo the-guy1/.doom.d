@@ -1,7 +1,6 @@
 #+TITLE:   My README for DOOM Emacs
 #+AUTHOR: Kenneth Lawson
 #+PROPERTY: header-args :tangle config.el
-#+auto_tangle: t
 #+STARTUP: showeverything
 
 
@@ -12,7 +11,6 @@
   - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
   - [[#beacon][Beacon]]
   - [[#my-information][My Information]]
-  - [[#auto-tangle][Auto Tangle]]
   - [[#fonts][Fonts]]
   - [[#theme][Theme]]
   - [[#line-numbers][Line Numbers]]
@@ -24,7 +22,7 @@
 
 * Description
 # A summary of what this module does.
-This is my literate DOOM Emacs config
+This is my literate DOOM Emacs config I know its not much but its mine
 
 * Some Screen shots
 - Dashboard
@@ -34,40 +32,29 @@ This is my literate DOOM Emacs config
   #+DESCRIPTION: a screenshot of my code
   [[./screenshots/code.png]]
 
-
 * My Configuration Files
 
 ** Disable cl depreciated warning
-This old library is still used by some plugins and Emacs will tell you to stop using it.
-#+begin_src elisp
-(setq byte-compile-warnings '(cl-functions))
-#+end_src
+ This old library is still used by some plugins and Emacs will tell you to stop using it.
+ #+begin_src elisp
+ (setq byte-compile-warnings '(cl-functions))
+ #+end_src
 
 ** Beacon
-Never lose your cursor.
-- This is to help you from loosing your cursor when you are scrolling.
-#+begin_src elisp
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-#+end_src
+ Never lose your cursor.
+ - This is to help you from loosing your cursor when you are scrolling.
+ #+begin_src elisp
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
+ #+end_src
 
 ** My Information
-This is so Emacs knows my name and email and will auto insert it if I want it to.
-#+begin_src elisp
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
-#+end_src
-
-** Auto Tangle
-I am using tangle which allows the code blocks from this readme to become be used as the actual config.el file.
-#+begin_src elisp
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default t))
-#+end_src
+ This is so Emacs knows my name and email and will auto insert it if I want it to.
+ #+begin_src elisp
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
+ #+end_src
 
 ** Fonts
 I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]. I am aware That I don't need to keep the original comments for this but I like to keep them just in case I need to reference them sometime.
@@ -94,7 +81,6 @@ I use Dracula theme I like the colors.
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dracula)
 #+end_src
-
 ** Line Numbers
 I use relitive line numders for quick jumps while coding.
 #+begin_src elisp
