@@ -57,7 +57,7 @@ This is my literate DOOM Emacs config I know its not much but its mine
  #+end_src
 
 ** Fonts
-I use Hack Nerd Font because I like how it looks and it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]. I am aware That I don't need to keep the original comments for this but I like to keep them just in case I need to reference them sometime.
+I use Hack Nerd Font because I like how it looks and because it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]. I am aware That I don't need to keep the original comments for this but I like to keep them just in case I need to reference them sometime.
 #+begin_src elisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
