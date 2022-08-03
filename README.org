@@ -18,7 +18,7 @@
   - [[#presentations][Presentations]]
   - [[#markdown][Markdown]]
   - [[#rss][RSS]]
-  -  [[#neotree][Neotree]]
+  - [[#neotree][Neotree]]
 
 * Description
 # A summary of what this module does.
@@ -228,7 +228,7 @@ with the main feeds that I use.
 
 #+end_src
 
-**  Neotree
+** Neotree
 This is a tree viewer that is reminiscent to those built into IDE's
 #+begin_src elisp
 (after! neotree
