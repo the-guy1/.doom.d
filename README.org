@@ -143,7 +143,7 @@ This is for my journal that I use for notes and some freewriting.
 #+end_src
 
 *** Org fonts
-An interactive function for attributs for header fonts sizes and colors within Org-mode
+An interactive function for attributes for header fonts sizes and colors within Org-mode
 #+begin_src elisp
 (defun org-colors-dracula ()
   "Enable Dracula colors for Org headers."
