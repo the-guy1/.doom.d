@@ -57,3 +57,4 @@
 (package! prettier-js)
 (package! org-super-agenda)
 (package! org-present)
+(package! olivetti)
