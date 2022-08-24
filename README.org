@@ -74,7 +74,7 @@ I use Hack Nerd Font because I like how it looks and because it can be looked at
 #+end_src
 
 ** Theme
-I use Dracula theme I like the colors.
+I mainly use Dracula theme because I like the colors but I have been enjoying tokyo night.
 #+begin_src elisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -160,6 +160,12 @@ An interactive function for attributes for header fonts sizes and colors within 
          (org-level-8 1.0 "#ff92d0" normal)))
     (set-face-attribute (nth 0 face) nil :font doom-variable-pitch-font :weight (nth 3 face) :height (nth 1 face) :foreground (nth 2 face)))
     (set-face-attribute 'org-table nil :font doom-font :weight 'normal :height 1.0 :foreground "#bfafdf"))
+#+end_src
+
+*** Org-roam
+Second brain with orgmode
+#+begin_src elisp
+(setq org-roam-directory "~/Dropbox/org/roam")
 #+end_src
 
 ** Presentations

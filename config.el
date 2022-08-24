@@ -72,6 +72,8 @@
     (set-face-attribute (nth 0 face) nil :font doom-variable-pitch-font :weight (nth 3 face) :height (nth 1 face) :foreground (nth 2 face)))
     (set-face-attribute 'org-table nil :font doom-font :weight 'normal :height 1.0 :foreground "#bfafdf"))
 
+(setq org-roam-directory "~/Dropbox/org/roam")
+
 (eval-after-load "org-present"
   '(progn
      (add-hook 'org-present-mode-hook
