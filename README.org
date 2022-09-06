@@ -69,7 +69,7 @@ I use Hack Nerd Font because I like how it looks and because it can be looked at
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
  (setq doom-font (font-spec :family "Hack Nerd Font" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 15)
+      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
 
