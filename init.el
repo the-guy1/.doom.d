@@ -155,7 +155,7 @@
        (org               ; organize your plain life in plain text
         +pretty
         +journal
-        +roam
+        +roam2
         +present          ; Emacs for presentations
         +journal)
        php               ; perl's insecure younger brother

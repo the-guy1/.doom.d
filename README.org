@@ -73,6 +73,9 @@ I use Hack Nerd Font because I like how it looks and because it can be looked at
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
 
+#+RESULTS:
+| ~/.dotfiles | ~/.doom.d | ~/Dropbox/Projects |
+
 ** Theme
 I mainly use Dracula theme because I like the colors but I have been enjoying tokyo night.
 #+begin_src elisp
