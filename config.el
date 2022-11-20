@@ -1,11 +1,11 @@
-(setq byte-compile-warnings '(cl-functions))
+ (setq byte-compile-warnings '(cl-functions))
 
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
 
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -23,7 +23,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
