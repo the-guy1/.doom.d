@@ -56,6 +56,7 @@
 (package! modus-themes)
 (package! prettier-js)
 (package! org-super-agenda)
+;; (package! org-auto-tangle)
 (package! org-present)
 (package! olivetti)
 ; (package! catppuccin-theme)
