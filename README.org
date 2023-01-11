@@ -1,5 +1,6 @@
 #+TITLE:   My README for DOOM Emacs
 #+AUTHOR: Kenneth Lawson
+#+DESCRIPTION: The readme file for my doom emacs config
 #+PROPERTY: header-args :tangle config.el
 #+STARTUP: showeverything
 
@@ -268,11 +269,11 @@ These are for exporting you org files into pdf's through [[https://www.latex-pro
 *** Org-auto-tangle
 This will auto tangle any org file that you want to auto tangle
 #+begin_src elisp
-;; (use-package! org-auto-tangle
-  ;; :defer t
-  ;; :hook (org-mode . org-auto-tangle-mode)
-  ;; :config
-  ;; (setq org-auto-tangle-default t))
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
 #+end_src
 
 ** Presentations

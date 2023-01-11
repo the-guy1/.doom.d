@@ -168,11 +168,11 @@
                                   ("\\section{%s}" . "\\section*{%s}")
                                   ("\\subsection{%s}" . "\\subsection*{%s}")))
 
-;; (use-package! org-auto-tangle
-  ;; :defer t
-  ;; :hook (org-mode . org-auto-tangle-mode)
-  ;; :config
-  ;; (setq org-auto-tangle-default t))
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
 
 (eval-after-load "org-present"
   '(progn
