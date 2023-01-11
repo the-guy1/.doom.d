@@ -74,34 +74,34 @@
 
 (setq org-roam-directory "~/Dropbox/org/roam")
 
-(after! org
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
-
-(setq
-   org-fancy-priorities-list '("🟥" "🟧" "🟨")
-   org-priority-faces
-   '((?A :foreground "#ff6c6b" :weight bold)
-     (?B :foreground "#98be65" :weight bold)
-     (?C :foreground "#c678dd" :weight bold))
-   org-agenda-block-separator 8411)
-
-(setq org-agenda-custom-commands
-      '(("v" "A better agenda view"
-         ((tags "PRIORITY=\"A\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
-          (tags "PRIORITY=\"B\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
-          (tags "PRIORITY=\"C\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Low-priority unfinished tasks:")))
-          (tags "customtag"
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Tasks marked with customtag:")))
-
-          (agenda "")
-          (alltodo "")))))
+;; (after! org
+  ;; (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
+;;
+;; (setq
+   ;; org-fancy-priorities-list '("🟥" "🟧" "🟨")
+   ;; org-priority-faces
+   ;; '((?A :foreground "#ff6c6b" :weight bold)
+     ;; (?B :foreground "#98be65" :weight bold)
+     ;; (?C :foreground "#c678dd" :weight bold))
+   ;; org-agenda-block-separator 8411)
+;;
+;; (setq org-agenda-custom-commands
+      ;; '(("v" "A better agenda view"
+         ;; ((tags "PRIORITY=\"A\""
+                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 ;; (org-agenda-overriding-header "High-priority unfinished tasks:")))
+          ;; (tags "PRIORITY=\"B\""
+                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 ;; (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
+          ;; (tags "PRIORITY=\"C\""
+                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 ;; (org-agenda-overriding-header "Low-priority unfinished tasks:")))
+          ;; (tags "customtag"
+                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                 ;; (org-agenda-overriding-header "Tasks marked with customtag:")))
+;;
+          ;; (agenda "")
+          ;; (alltodo "")))))
 
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
@@ -112,40 +112,14 @@
   (setq org-latex-classes nil))
 
 (add-to-list 'org-latex-classes
-             '("ethz"
-               "\\documentclass[a4paper,11pt,titlepage]{memoir}
-\\usepackage[utf8]{inputenc}
-\\usepackage[T1]{fontenc}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{rotating}
-\\usepackage[normalem]{ulem}
-\\usepackage{amsmath}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{mathpazo}
-\\usepackage{color}
-\\usepackage{enumerate}
-\\definecolor{bg}{rgb}{0.95,0.95,0.95}
-\\tolerance=1000
-      [NO-DEFAULT-PACKAGES]
-      [PACKAGES]
-      [EXTRA]
-\\linespread{1.1}
-\\hypersetup{pdfborder=0 0 0}"
-               ("\\chapter{%s}" . "\\chapter*{%s}")
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
+             '("novel"
+               "\\documentclass[novel,geometry,letterpaper,courier]{sffms}
+               \\surname{Lawson}
+               \\address{Address redacted\u005C\u005C email: koodog@gmail.com}
+               \\disposable
+       [NO-DEFAULT-PACKAGES]
+       [NO-PACKAGES]"
+               ("\\chapter{%s}" . "\\chapter{%s}" )))
 
 (add-to-list 'org-latex-classes
              '("article"
@@ -194,11 +168,11 @@
                                   ("\\section{%s}" . "\\section*{%s}")
                                   ("\\subsection{%s}" . "\\subsection*{%s}")))
 
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default t))
+;; (use-package! org-auto-tangle
+  ;; :defer t
+  ;; :hook (org-mode . org-auto-tangle-mode)
+  ;; :config
+  ;; (setq org-auto-tangle-default t))
 
 (eval-after-load "org-present"
   '(progn
