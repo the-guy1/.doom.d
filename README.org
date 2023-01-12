@@ -167,37 +167,37 @@ Second brain with orgmode
 #+begin_src elisp
 (setq org-roam-directory "~/Dropbox/org/roam")
 #+end_src
-*** Org-aganda
+*** Org-agenda
 This is mainly for a TODO list
 #+begin_src elisp
-;; (after! org
-  ;; (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
-;;
-;; (setq
-   ;; org-fancy-priorities-list '("🟥" "🟧" "🟨")
-   ;; org-priority-faces
-   ;; '((?A :foreground "#ff6c6b" :weight bold)
-     ;; (?B :foreground "#98be65" :weight bold)
-     ;; (?C :foreground "#c678dd" :weight bold))
-   ;; org-agenda-block-separator 8411)
-;;
-;; (setq org-agenda-custom-commands
-      ;; '(("v" "A better agenda view"
-         ;; ((tags "PRIORITY=\"A\""
-                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 ;; (org-agenda-overriding-header "High-priority unfinished tasks:")))
-          ;; (tags "PRIORITY=\"B\""
-                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 ;; (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
-          ;; (tags "PRIORITY=\"C\""
-                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 ;; (org-agenda-overriding-header "Low-priority unfinished tasks:")))
-          ;; (tags "customtag"
-                ;; ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 ;; (org-agenda-overriding-header "Tasks marked with customtag:")))
-;;
-          ;; (agenda "")
-          ;; (alltodo "")))))
+ (after! org
+   (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
+
+ (setq
+    org-fancy-priorities-list '("🟥" "🟧" "🟨")
+    org-priority-faces
+    '((?A :foreground "#ff6c6b" :weight bold)
+      (?B :foreground "#98be65" :weight bold)
+      (?C :foreground "#c678dd" :weight bold))
+    org-agenda-block-separator 8411)
+
+ (setq org-agenda-custom-commands
+       '(("v" "A better agenda view"
+          ((tags "PRIORITY=\"A\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "High-priority unfinished tasks:")))
+           (tags "PRIORITY=\"B\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
+           (tags "PRIORITY=\"C\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Low-priority unfinished tasks:")))
+           (tags "customtag"
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Tasks marked with customtag:")))
+
+           (agenda "")
+           (alltodo "")))))
 #+end_src
 *** LaTeX export variables
 These are for exporting you org files into pdf's through [[https://www.latex-project.org/][LaTeX]]
