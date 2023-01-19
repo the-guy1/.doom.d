@@ -201,6 +201,7 @@ This is mainly for a TODO list
 #+end_src
 *** LaTeX export variables
 These are for exporting you org files into pdf's through [[https://www.latex-project.org/][LaTeX]]
+I am planning on working on getting a good manuscript setup for this
 #+begin_src elisp
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
