@@ -103,7 +103,7 @@ I am well aware that I don't need to use dashboard however I enjoy the splash sc
 #+end_src
 
 ** Org-mode
-These are just a handful of changes to orgmode as most of the changes are from extentions.
+These are just a handful of changes to orgmode as most of the changes are from extensions.
 *** Timer
 A little bell for the timer built into Emacs org-mode.
 - I found the bell sound online.
@@ -135,7 +135,7 @@ This allows me to move headings and there content around a document.
             (org-superstar-mode 1)))
 #+end_src
 *** Journal
-This is for my journal that I use for notes and some freewriting.
+This is for my journal that I use for notes and some free-writing.
 #+begin_src elisp
 (setq org-journal-dir "~/Dropbox/org/journal/"
       org-journal-date-prefix "#+TITLE: "
@@ -320,17 +320,17 @@ with the main feeds that I use.
                      ("https://hackaday.com/blog/feedd/" hackaday)
                      ("https://opensource.com/feed" opensource linux)
                      ("https://www.snopes.com/feed/" snopes)
-                     ("https://chaski.huffpost.com/us/auto/vertical/books" hp books)
-                     ("https://chaski.huffpost.com/us/auto/vertical/education" hp education)
-                     ("https://chaski.huffpost.com/us/auto/vertical/queer-voices" hp queer)
-                     ("https://chaski.huffpost.com/us/auto/vertical/science" hp science)
-                     ("https://chaski.huffpost.com/us/auto/vertical/technology" hp technology)
-                     ("https://chaski.huffpost.com/us/auto/vertical/green" hp green)
-                     ("https://chaski.huffpost.com/us/auto/vertical/media" hp media)
-                     ("https://chaski.huffpost.com/us/auto/vertical/politics" hp politics)
-                     ("https://chaski.huffpost.com/us/auto/vertical/religion" hp religion)
-                     ("https://chaski.huffpost.com/us/auto/vertical/world-news" hp world)
-                     ("https://chaski.huffpost.com/us/auto/vertical/us-news" hp us)
+                     ("https://chaski.huffpost.com/us/auto/vertical/books" huff post books)
+                     ("https://chaski.huffpost.com/us/auto/vertical/education" huff post education)
+                     ("https://chaski.huffpost.com/us/auto/vertical/queer-voices" huff post queer)
+                     ("https://chaski.huffpost.com/us/auto/vertical/science" huff post science)
+                     ("https://chaski.huffpost.com/us/auto/vertical/technology" huff post technology)
+                     ("https://chaski.huffpost.com/us/auto/vertical/green" huff post green)
+                     ("https://chaski.huffpost.com/us/auto/vertical/media" huff post media)
+                     ("https://chaski.huffpost.com/us/auto/vertical/politics" huff post politics)
+                     ("https://chaski.huffpost.com/us/auto/vertical/religion" huff post religion)
+                     ("https://chaski.huffpost.com/us/auto/vertical/world-news" huff post world)
+                     ("https://chaski.huffpost.com/us/auto/vertical/us-news" huff post us)
                      ("https://opensource.com/feed" opensource linux)
                      ("https://linux.softpedia.com/backend.xml" softpedia linux)
                      ("https://itsfoss.com/feed/" itsfoss)
