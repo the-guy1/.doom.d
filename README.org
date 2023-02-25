@@ -275,7 +275,7 @@ This will auto tangle any org file that you want to auto tangle
   :defer t
   :hook (org-mode . org-auto-tangle-mode)
   :config
-  (setq org-auto-tangle-default t))
+  (setq org-auto-tangle-default f))
 #+end_src
 
 ** Presentations
