@@ -6,21 +6,6 @@
 #+STARTUP: showeverything
 
 * Table of Contents :toc:
-- [[#description][Description]]
-- [[#some-screen-shots][Some Screen shots]]
-- [[#my-configuration-files][My Configuration Files]]
-  - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
-  - [[#beacon][Beacon]]
-  - [[#my-information][My Information]]
-  - [[#fonts][Fonts]]
-  - [[#theme][Theme]]
-  - [[#line-numbers][Line Numbers]]
-  - [[#dashboard][Dashboard]]
-  - [[#org-mode][Org-mode]]
-  - [[#presentations][Presentations]]
-  - [[#markdown][Markdown]]
-  - [[#rss][RSS]]
-  - [[#neotree][Neotree]]
 
 * Description
 This is my literate DOOM Emacs config I know its not much but its mine
@@ -271,11 +256,11 @@ I am planning on working on getting a good manuscript setup for this
 *** Org-auto-tangle
 This will auto tangle any org file that you want to auto tangle
 #+begin_src elisp
-(use-package! org-auto-tangle
-  :defer t
-  :hook (org-mode . org-auto-tangle-mode)
-  :config
-  (setq org-auto-tangle-default f))
+;; (use-package! org-auto-tangle
+  ;; :defer t
+  ;; :hook (org-mode . org-auto-tangle-mode)
+  ;; :config
+  ;; (setq org-auto-tangle-default f))
 #+end_src
 
 ** Presentations
