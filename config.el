@@ -222,6 +222,14 @@
                      ("http://feeds.feedburner.com/d0od" omgubuntu)
                      ("https://www.computerworld.com/index.rss" computerworld)
                      ("https://feeds.arstechnica.com/arstechnica/index" arstechnica)
+                     ("https://gizmodo.com/rss" Gizmodo)
+                     ("https://lifehacker.com/rss" Lifehacker)
+                     ("https://www.wired.com/about/rss-feeds/" WIRED)
+                     ("https://www.engadget.com/rss.xml" engadget)
+                     ("https://feeds.feedburner.com/TheHackersNews" TheHackerNews)
+                     ("https://www.welivesecurity.com/feed/" welivesecurity)
+                     ("https://www.hackread.com/feed/" HACKread)
+                     ("https://www.darkreading.com/rss.xml" DARKReading)
                      ("http://www.theverge.com/rss/index.xml" the verge))))
 
 (after! neotree
