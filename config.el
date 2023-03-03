@@ -1,11 +1,11 @@
-(setq byte-compile-warnings '(cl-functions))
+ (setq byte-compile-warnings '(cl-functions))
 
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
 
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -74,34 +74,34 @@
 
 (setq org-roam-directory "~/Dropbox/org/roam")
 
-(after! org
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
+ (after! org
+   (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
 
-(setq
-   org-fancy-priorities-list '("🟥" "🟧" "🟨")
-   org-priority-faces
-   '((?A :foreground "#ff6c6b" :weight bold)
-     (?B :foreground "#98be65" :weight bold)
-     (?C :foreground "#c678dd" :weight bold))
-   org-agenda-block-separator 8411)
+ (setq
+    org-fancy-priorities-list '("🟥" "🟧" "🟨")
+    org-priority-faces
+    '((?A :foreground "#ff6c6b" :weight bold)
+      (?B :foreground "#98be65" :weight bold)
+      (?C :foreground "#c678dd" :weight bold))
+    org-agenda-block-separator 8411)
 
-(setq org-agenda-custom-commands
-      '(("v" "A better agenda view"
-         ((tags "PRIORITY=\"A\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
-          (tags "PRIORITY=\"B\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
-          (tags "PRIORITY=\"C\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Low-priority unfinished tasks:")))
-          (tags "customtag"
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Tasks marked with customtag:")))
+ (setq org-agenda-custom-commands
+       '(("v" "A better agenda view"
+          ((tags "PRIORITY=\"A\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "High-priority unfinished tasks:")))
+           (tags "PRIORITY=\"B\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
+           (tags "PRIORITY=\"C\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Low-priority unfinished tasks:")))
+           (tags "customtag"
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Tasks marked with customtag:")))
 
-          (agenda "")
-          (alltodo "")))))
+           (agenda "")
+           (alltodo "")))))
 
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
@@ -196,41 +196,42 @@
  '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2)))))
 
 (require 'elfeed-goodies)
+(global-set-key (kbd "C-x w") 'elfeed)
 (elfeed-goodies/setup)
 (setq elfeed-goodies/entry-pane-size 0.5)
-(setq elfeed-feeds (quote
-                    (("https://gamingonlinux.com/article_rss.php" gaming on linux)
-                     ("https://hackaday.com/blog/feedd/" hackaday)
-                     ("https://opensource.com/feed" opensource linux)
-                     ("https://www.snopes.com/feed/" snopes)
-                     ("https://chaski.huffpost.com/us/auto/vertical/books" huff post books)
-                     ("https://chaski.huffpost.com/us/auto/vertical/education" huff post education)
-                     ("https://chaski.huffpost.com/us/auto/vertical/queer-voices" huff post queer)
-                     ("https://chaski.huffpost.com/us/auto/vertical/science" huff post science)
-                     ("https://chaski.huffpost.com/us/auto/vertical/technology" huff post technology)
-                     ("https://chaski.huffpost.com/us/auto/vertical/green" huff post green)
-                     ("https://chaski.huffpost.com/us/auto/vertical/media" huff post media)
-                     ("https://chaski.huffpost.com/us/auto/vertical/politics" huff post politics)
-                     ("https://chaski.huffpost.com/us/auto/vertical/religion" huff post religion)
-                     ("https://chaski.huffpost.com/us/auto/vertical/world-news" huff post world)
-                     ("https://chaski.huffpost.com/us/auto/vertical/us-news" huff post us)
-                     ("https://opensource.com/feed" opensource linux)
-                     ("https://linux.softpedia.com/backend.xml" softpedia linux)
-                     ("https://itsfoss.com/feed/" itsfoss)
-                     ("https://www.zdnet.com/topic/linux/rss.xml" zdnet linux)
-                     ("https://www.phoronix.com/rss.php" phoronix)
-                     ("http://feeds.feedburner.com/d0od" omgubuntu)
-                     ("https://www.computerworld.com/index.rss" computerworld)
-                     ("https://feeds.arstechnica.com/arstechnica/index" arstechnica)
-                     ("https://gizmodo.com/rss" Gizmodo)
-                     ("https://lifehacker.com/rss" Lifehacker)
-                     ("https://www.wired.com/about/rss-feeds/" WIRED)
-                     ("https://www.engadget.com/rss.xml" engadget)
-                     ("https://feeds.feedburner.com/TheHackersNews" TheHackerNews)
-                     ("https://www.welivesecurity.com/feed/" welivesecurity)
-                     ("https://www.hackread.com/feed/" HACKread)
-                     ("https://www.darkreading.com/rss.xml" DARKReading)
-                     ("http://www.theverge.com/rss/index.xml" the verge))))
+(setq elfeed-feeds '("https://gamingonlinux.com/article_rss.php"
+                     "https://hackaday.com/blog/feedd/"
+                     "https://opensource.com/feed"
+                     "https://www.snopes.com/feed/"
+                     "https://chaski.huffpost.com/us/auto/vertical/books"
+                     "https://chaski.huffpost.com/us/auto/vertical/education" 
+                     "https://chaski.huffpost.com/us/auto/vertical/queer-voices" 
+                     "https://chaski.huffpost.com/us/auto/vertical/science"
+                     "https://chaski.huffpost.com/us/auto/vertical/technology"
+                     "https://chaski.huffpost.com/us/auto/vertical/green"
+                     "https://chaski.huffpost.com/us/auto/vertical/media"
+                     "https://chaski.huffpost.com/us/auto/vertical/politics"
+                     "https://chaski.huffpost.com/us/auto/vertical/religion" 
+                     "https://chaski.huffpost.com/us/auto/vertical/world-news"
+                     "https://chaski.huffpost.com/us/auto/vertical/us-news"
+                     "https://opensource.com/feed"
+                     "https://linux.softpedia.com/backend.xml"
+                     "https://itsfoss.com/feed/"
+                     "https://www.zdnet.com/topic/linux/rss.xml"
+                     "https://www.phoronix.com/rss.php"
+                     "http://feeds.feedburner.com/d0od"
+                     "https://www.computerworld.com/index.rss"
+                     "https://feeds.arstechnica.com/arstechnica/index"
+                     "https://gizmodo.com/rss"
+                     "https://lifehacker.com/rss"
+                     "https://www.wired.com/about/rss-feeds/"
+                     "https://www.engadget.com/rss.xml"
+                     "https://feeds.feedburner.com/TheHackersNews"
+                     "https://www.welivesecurity.com/feed/"
+                     "https://www.hackread.com/feed/"
+                     "https://www.darkreading.com/rss.xml"
+                     "https://xkcd.com/rss.xml"
+                     "http://www.theverge.com/rss/index.xml"))
 
 (after! neotree
   (setq neo-smart-open t
