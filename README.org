@@ -301,41 +301,6 @@ with the main feeds that I use.
 (global-set-key (kbd "C-x w") 'elfeed)
 (elfeed-goodies/setup)
 (setq elfeed-goodies/entry-pane-size 0.5)
-(setq elfeed-feeds '("https://gamingonlinux.com/article_rss.php"
-                     "https://hackaday.com/blog/feedd/"
-                     "https://opensource.com/feed"
-                     "https://www.snopes.com/feed/"
-                     "https://chaski.huffpost.com/us/auto/vertical/books"
-                     "https://chaski.huffpost.com/us/auto/vertical/education" 
-                     "https://chaski.huffpost.com/us/auto/vertical/queer-voices" 
-                     "https://chaski.huffpost.com/us/auto/vertical/science"
-                     "https://chaski.huffpost.com/us/auto/vertical/technology"
-                     "https://chaski.huffpost.com/us/auto/vertical/green"
-                     "https://chaski.huffpost.com/us/auto/vertical/media"
-                     "https://chaski.huffpost.com/us/auto/vertical/politics"
-                     "https://chaski.huffpost.com/us/auto/vertical/religion" 
-                     "https://chaski.huffpost.com/us/auto/vertical/world-news"
-                     "https://chaski.huffpost.com/us/auto/vertical/us-news"
-                     "https://opensource.com/feed"
-                     "https://linux.softpedia.com/backend.xml"
-                     "https://itsfoss.com/feed/"
-                     "https://www.zdnet.com/topic/linux/rss.xml"
-                     "https://www.phoronix.com/rss.php"
-                     "http://feeds.feedburner.com/d0od"
-                     "https://www.computerworld.com/index.rss"
-                     "https://feeds.arstechnica.com/arstechnica/index"
-                     "https://gizmodo.com/rss"
-                     "https://lifehacker.com/rss"
-                     "https://www.wired.com/about/rss-feeds/"
-                     "https://www.engadget.com/rss.xml"
-                     "https://feeds.feedburner.com/TheHackersNews"
-                     "https://www.welivesecurity.com/feed/"
-                     "https://www.hackread.com/feed/"
-                     "https://www.darkreading.com/rss.xml"
-                     "https://xkcd.com/rss.xml"
-                     "http://www.theverge.com/rss/index.xml"))
-
-
 #+end_src
 
 ** Neotree
