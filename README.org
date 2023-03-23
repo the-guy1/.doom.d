@@ -6,6 +6,22 @@
 #+STARTUP: showeverything
 
 * Table of Contents :toc:
+- [[#description][Description]]
+- [[#some-screen-shots][Some Screen shots]]
+- [[#my-configuration-files][My Configuration Files]]
+  - [[#disable-cl-depreciated-warning][Disable cl depreciated warning]]
+  - [[#beacon][Beacon]]
+  - [[#my-information][My Information]]
+  - [[#fonts][Fonts]]
+  - [[#theme][Theme]]
+  - [[#line-numbers][Line Numbers]]
+  - [[#dashboard][Dashboard]]
+  - [[#org-mode][Org-mode]]
+  - [[#presentations][Presentations]]
+  - [[#markdown][Markdown]]
+  - [[#rss][RSS]]
+  - [[#neotree][Neotree]]
+  - [[#org-novelist][Org-Novelist]]
 
 * Description
 This is my literate DOOM Emacs config I know its not much but its mine
@@ -19,7 +35,7 @@ This is my literate DOOM Emacs config I know its not much but its mine
   [[./screenshots/code.png]]
 
 * My Configuration Files
-
+These are the changes that I have made over the time that I use Emacs
 ** Disable cl depreciated warning
  This old library is still used by some plugins and Emacs will tell you to stop using it.
  #+begin_src elisp
