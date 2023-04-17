@@ -21,7 +21,6 @@
   - [[#markdown][Markdown]]
   - [[#rss][RSS]]
   - [[#neotree][Neotree]]
-  - [[#org-novelist][Org-Novelist]]
 
 * Description
 This is my literate DOOM Emacs config I know its not much but its mine
@@ -59,7 +58,7 @@ These are the changes that I have made over the time that I use Emacs
  #+end_src
 
 ** Fonts
-I use Hack Nerd Font because I like how it looks and because it can be looked at for a long time with minimal eye strain [[https://www.asktheegghead.com/10-best-programming-fonts-to-save-you-from-eyestrain/][10 Best Programming Fonts to Save you from Eyestrain]]. I am aware That I don't need to keep the original comments for this but I like to keep them just in case I need to reference them sometime.
+This is one of my favorite fonts to use its distinctive while not being distracting
 #+begin_src elisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -70,8 +69,8 @@ I use Hack Nerd Font because I like how it looks and because it can be looked at
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
- (setq doom-font (font-spec :family "Hack Nerd Font" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16)
+ (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 16)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 #+end_src
 
