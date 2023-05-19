@@ -1,11 +1,11 @@
-(setq byte-compile-warnings '(cl-functions))
+ (setq byte-compile-warnings '(cl-functions))
 
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
 
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -23,7 +23,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-laserwave)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -74,34 +74,34 @@
 
 (setq org-roam-directory "~/Dropbox/org/roam")
 
-(after! org
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
+ (after! org
+   (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
 
-(setq
-   org-fancy-priorities-list '("🟥" "🟧" "🟨")
-   org-priority-faces
-   '((?A :foreground "#ff6c6b" :weight bold)
-     (?B :foreground "#98be65" :weight bold)
-     (?C :foreground "#c678dd" :weight bold))
-   org-agenda-block-separator 8411)
+ (setq
+    org-fancy-priorities-list '("🟥" "🟧" "🟨")
+    org-priority-faces
+    '((?A :foreground "#ff6c6b" :weight bold)
+      (?B :foreground "#98be65" :weight bold)
+      (?C :foreground "#c678dd" :weight bold))
+    org-agenda-block-separator 8411)
 
-(setq org-agenda-custom-commands
-      '(("v" "A better agenda view"
-         ((tags "PRIORITY=\"A\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
-          (tags "PRIORITY=\"B\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
-          (tags "PRIORITY=\"C\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Low-priority unfinished tasks:")))
-          (tags "customtag"
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Tasks marked with customtag:")))
+ (setq org-agenda-custom-commands
+       '(("v" "A better agenda view"
+          ((tags "PRIORITY=\"A\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "High-priority unfinished tasks:")))
+           (tags "PRIORITY=\"B\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
+           (tags "PRIORITY=\"C\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Low-priority unfinished tasks:")))
+           (tags "customtag"
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Tasks marked with customtag:")))
 
-          (agenda "")
-          (alltodo "")))))
+           (agenda "")
+           (alltodo "")))))
 
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
