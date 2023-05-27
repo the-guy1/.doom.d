@@ -25,7 +25,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'catppuccin)
 
-(set-frame-parameter (selected-frame) 'alpha '(90 . 90)) (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+(set-frame-parameter (selected-frame) 'alpha '(35 . 35)) (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
