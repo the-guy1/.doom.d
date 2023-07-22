@@ -1,11 +1,11 @@
-(setq byte-compile-warnings '(cl-functions))
+ (setq byte-compile-warnings '(cl-functions))
 
-(setq beacon-mode 1) ;; enable beacon mode
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+ (setq beacon-mode 1) ;; enable beacon mode
+ ;; Place your private configuration here! Remember, you do not need to run 'doom
+ ;; sync' after modifying this file!
 
-(setq user-full-name "Kenneth Lawson"
-      user-mail-address "lawsonkenneth755@gmail.com")
+ (setq user-full-name "Kenneth Lawson"
+       user-mail-address "lawsonkenneth755@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -16,8 +16,8 @@
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
- (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16)
+ (setq doom-font (font-spec :family "Hack Nerd Font" :size 14 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -76,34 +76,34 @@
 
 (setq org-roam-directory "~/Dropbox/org/roam")
 
-(after! org
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
+ (after! org
+   (setq org-agenda-files '("~/Dropbox/org/agenda.org")))
 
-(setq
-   org-fancy-priorities-list '("🟥" "🟧" "🟨")
-   org-priority-faces
-   '((?A :foreground "#ff6c6b" :weight bold)
-     (?B :foreground "#98be65" :weight bold)
-     (?C :foreground "#c678dd" :weight bold))
-   org-agenda-block-separator 8411)
+ (setq
+    org-fancy-priorities-list '("🟥" "🟧" "🟨")
+    org-priority-faces
+    '((?A :foreground "#ff6c6b" :weight bold)
+      (?B :foreground "#98be65" :weight bold)
+      (?C :foreground "#c678dd" :weight bold))
+    org-agenda-block-separator 8411)
 
-(setq org-agenda-custom-commands
-      '(("v" "A better agenda view"
-         ((tags "PRIORITY=\"A\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
-          (tags "PRIORITY=\"B\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
-          (tags "PRIORITY=\"C\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Low-priority unfinished tasks:")))
-          (tags "customtag"
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-                 (org-agenda-overriding-header "Tasks marked with customtag:")))
+ (setq org-agenda-custom-commands
+       '(("v" "A better agenda view"
+          ((tags "PRIORITY=\"A\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "High-priority unfinished tasks:")))
+           (tags "PRIORITY=\"B\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Medium-priority unfinished tasks:")))
+           (tags "PRIORITY=\"C\""
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Low-priority unfinished tasks:")))
+           (tags "customtag"
+                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                  (org-agenda-overriding-header "Tasks marked with customtag:")))
 
-          (agenda "")
-          (alltodo "")))))
+           (agenda "")
+           (alltodo "")))))
 
 (setq org-latex-pdf-process
       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
