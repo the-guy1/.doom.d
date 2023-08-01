@@ -14,6 +14,7 @@
   - [[#my-information][My Information]]
   - [[#fonts][Fonts]]
   - [[#theme][Theme]]
+  - [[#transparency][Transparency]]
   - [[#opacity][Opacity]]
   - [[#line-numbers][Line Numbers]]
   - [[#dashboard][Dashboard]]
@@ -82,6 +83,12 @@ I mainly use Dracula theme because I like the colors but I have been enjoying to
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'catppuccin)
+#+end_src
+
+** Transparency
+With Emacs 29 they finally added true transparency
+#+begin_src elisp
+(add-to-list 'default-frame-alist '(alpha-background . 50))
 #+end_src
 
 ** Opacity
