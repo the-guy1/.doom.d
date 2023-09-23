@@ -25,7 +25,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'catppuccin)
 
-(add-to-list 'default-frame-alist '(alpha-background . 50))
+;; (add-to-list 'default-frame-alist '(alpha-background . 40))
 
 (set-frame-parameter (selected-frame) 'alpha '(35 . 35)) (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 

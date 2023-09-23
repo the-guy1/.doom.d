@@ -86,9 +86,9 @@ I mainly use Dracula theme because I like the colors but I have been enjoying to
 #+end_src
 
 ** Transparency
-With Emacs 29 they finally added true transparency
+With Emacs 29 they finally added true transparency I realized I don't like this
 #+begin_src elisp
-(add-to-list 'default-frame-alist '(alpha-background . 50))
+;; (add-to-list 'default-frame-alist '(alpha-background . 40))
 #+end_src
 
 ** Opacity
