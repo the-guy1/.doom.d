@@ -16,8 +16,8 @@
 ;; - `doom-unicode-font' -- for unicode glyphs
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
- (setq doom-font (font-spec :family "Hack Nerd Font" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 16)
+ (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 14 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Mononoki Nerd Font" :size 16)
       projectile-project-search-path '("~/.dotfiles" "~/.doom.d" "~/Dropbox/Projects"))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
