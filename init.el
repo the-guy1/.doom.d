@@ -161,12 +161,12 @@
         +org-plus-contrib
         +present          ; Emacs for presentations
         +journal)
-       php               ; perl's insecure younger brother
+       ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        purescript        ; javascript, but functional
        (python            ; beautiful is better than ugly
-       +lsp
-       +pyenv)
+        +lsp
+        +pyenv)
        ;; pip install jedi autopep8 flake8 ipython importmagic yapf
        qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
