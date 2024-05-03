@@ -60,3 +60,4 @@
 (package! org-present)
 (package! olivetti)
 (package! catppuccin-theme)
+(package! gist)
